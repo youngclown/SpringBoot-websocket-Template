@@ -6,7 +6,7 @@ public class InChatMessageVO {
 	private String content;		// 메세지 내용
 	private String type;		// 채팅 타입
 	private String chatId;		// 채팅 고유 아이디
-	
+
 	public String getToken() {
 		return token;
 	}
