@@ -1,0 +1,15 @@
+#Redis
+spring:
+  redis:
+    host: 192.168.85.128
+    password: hardcoding
+    port: 6379
+    database: 1
+
+#View
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+    static-path-pattern: /res/**
