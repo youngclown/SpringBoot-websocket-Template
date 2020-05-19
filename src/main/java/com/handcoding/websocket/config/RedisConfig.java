@@ -13,12 +13,14 @@ public class RedisConfig {
 
 	private @Value("${spring.redis.host}") String redisHost;
 	private @Value("${spring.redis.port}") int redisPort;
+	private @Value("${spring.redis.password}") String redisPassword;
 
 	@Bean
 	public JedisConnectionFactory connectionFactory() {
 		JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory();
 		jedisConnectionFactory.setHostName(redisHost);
 		jedisConnectionFactory.setPort(redisPort);
+		jedisConnectionFactory.setPassword(redisPassword);
 		jedisConnectionFactory.setUsePool(true);
 		return jedisConnectionFactory;
 	}
